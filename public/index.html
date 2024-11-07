@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Real Time Chat</title>
+    </head>
+    <body>
+        <main class="mainCss">
+            <form id="UserNameForm" class="userNameFormCss showBar">
+                <fieldset class="campFN">
+                    <legend class="H1Usn">Para entra na aplicação</legend>
+                    <input type="text" name="Uname" id="Uname" class="UNInput"
+                        placeholder="Diga seu nome">
+                    <button class="BTNuN">Entrar</button>
+                </fieldset>
+            </form>
+
+            <section class="DisplayChat">
+                <h1 class="h1Tittle">Um chat de conversa em tempo real</h1>
+                <div id="MessagesBox"></div>
+                <form id="MessageForm" class="formCss">
+                    <textarea type="text" name="Newmessage" id="Newmessage"
+                        class="messageICss"></textarea>
+                    <button type="submit" class="BTNFmensage">Enviar</button>
+                </form>
+            </section>
+        </main>
+
+        <script type="text/javascript" src="socket.io/socket.io.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>

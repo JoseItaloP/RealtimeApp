@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&family=Sour+Gummy&display=swap');
+
+
+:root{
+    --background: #003049;
+    --mainColor: #669bbc;
+    --text: #c1121f;
+    --textSecond:  #780000;
+    --secondColor: #fdf0d5;
+    --fontTittle: "Outfit", sans-serif;
+    --fontChat: "Sour Gummy", sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*User name screen*/
+.mainCss{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--background);
+}
+
+.userNameFormCss{
+    border-radius: 1em;
+    background-color: #002f4974;
+    backdrop-filter: blur(2px);
+    margin: auto;
+}
+
+.H1Usn{
+    font-size: 1.5em;
+    font-family: var(--fontTittle);
+    color: var(--text);
+}
+
+.UNInput{
+    padding: 0.4em;
+    width: -webkit-fill-available;
+    font-size: 1.2em;
+    font-family: var(--fontChat);
+    border: 0 solid;
+    background-color: var(--secondColor);
+    color: var(--textSecond);
+}
+
+.campFN{
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid var(--secondColor);
+}
+
+.BTNuN{
+    margin-top: 5px;
+    padding: 5px;
+    width: 100%;
+    font-size: 1.2em;
+    font-family: var(--fontTittle);
+    border: 0px solid;
+    background-color: var(--secondColor);
+    color: var(--textSecond);
+
+    transition: 0.8s;
+}
+
+.BTNuN:hover{
+    cursor: pointer;
+    background-color: var(--textSecond);
+    color: var(--secondColor);
+    transition: 0.8s;
+}
+
+.showBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100;
+    visibility: visible;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+.NotshowBar{
+    display: none;
+    z-index: 0;
+    visibility: hidden;
+}
+
+/*Message screen*/
+
+.DisplayChat{
+    width: 75%;
+    max-width: 50em;
+    height: 80%;
+    background-color: var(--mainColor);
+    padding: 1.7em;
+    border-radius: 1em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+#MessagesBox{
+    height: 79%;
+    width: 100%;
+
+    border: 1px solid var(--textSecond);
+    background-color: var(--secondColor);
+    margin-bottom: 10px;
+
+    text-overflow: clip;
+    overflow: auto;
+    overflow-x: hidden;
+    white-space: wrap;
+}
+
+.h1Tittle{
+    font-size: 2em;
+    font-family: var(--fontTittle);
+    color: var(--secondColor);
+    margin-top: 0;
+}
+
+.formCss{
+    width: 100%;
+    height: 15%;
+    display: flex;
+}
+
+.messageICss{
+    width: 100%;
+    padding: 1%;
+    max-height: 100%;
+    font-family: var(--fontChat);
+
+    border: 0 solid;
+    background-color: var(--secondColor);
+    color: var(--text);
+    border-radius: 0px 0px 0px 1em;
+}
+
+.BTNFmensage{
+    padding: 3%;
+    border: 0 solid;
+    font-family: var(--fontTittle);
+    background-color: var(--secondColor);
+    color: var(--text);
+    transition: 0.8s;
+    border-radius: 0px 0px 1em 0px;
+}
+
+.BTNFmensage:hover{
+    cursor: pointer;
+    background-color: var(--textSecond);
+    color: var(--secondColor);
+    transition: 0.8s;
+}
+
+/*Messages Box*/
+.YouMessagesBoxNew{
+    width: 100%;
+    max-height: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.MessagesBoxNew{
+    width: 100%;
+    max-height: 50%;
+    display: flex;
+}
+
+.YouMessagesNew{
+    padding: 10px;
+    border-radius: 1em 0px 1em 1em;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: var(--mainColor);
+    min-width: 10%;
+    max-width: 45%;
+} 
+
+.MessagesNew{
+    padding: 10px;
+    border-radius: 0px 1em 1em 1em;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    background-color: var(--mainColor);
+    min-width: 10%;
+    max-width: 45%;
+}
+
+.MessageNewname{
+    font-size: 1.2em;
+    font-family: var(--fontTittle);
+    font-weight: 800;
+    color: var(--textSecond);
+}
+
+.MessageNewMessage{
+    color: var(--text);
+    overflow-wrap: anywhere;
+    text-overflow: clip;
+    overflow: auto;
+    max-height: 80%;
+
+    font-family: var(--fontChat);
+}
+
+.NewUserMessage{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.UserEntry{
+    color: var(--textSecond);
+    font-family: var(--fontTittle);
+}
+
+.UserNameM{
+    color: var(--text);
+}
+
+/*Animações*/
+
+.YouMAnimation {
+	-webkit-animation: YouMAnimation 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: YouMAnimation 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.OtherMAnimation {
+	-webkit-animation: OtherMAnimation 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: OtherMAnimation 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes YouMAnimation {
+    0% {
+      -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+              transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+              transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes YouMAnimation {
+    0% {
+      -webkit-transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+              transform: rotateY(20deg) rotateX(35deg) translate(300px, -300px) skew(-35deg, 10deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+              transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+      opacity: 1;
+    }
+  }
+
+@-webkit-keyframes OtherMAnimation {
+    0% {
+      -webkit-transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+              transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+              transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+      opacity: 1;
+    }
+  }
+  @keyframes OtherMAnimation {
+    0% {
+      -webkit-transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+              transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+              transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+      opacity: 1;
+    }
+  }
+  
+
+  /* screens */
+
+  @media screen and (max-width: 790px){
+
+    .mainCss{
+        width: 100%;
+    }
+    .DisplayChat{
+        width: -webkit-fill-available;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    .h1Tittle{
+        text-align: center;
+    }
+    
+  }
