@@ -1,6 +1,4 @@
-
-(function () {
-  const socket = io();
+const socket = io();
   const MessageForm = document.getElementById("MessageForm");
   const Newmessage = document.getElementById("Newmessage");
   const Username = document.getElementById("Uname");
@@ -33,42 +31,21 @@
       Newmessage.value = "";
     }
   });
-
-  // window.addEventListener("l", (e) => {
-  //   // e.preventDefault();
-  //   console.log(Username.value.length)
-  //   if(Username.value.length === 0){
-  //     return;
-  //   }
-  //   socket.emit("newUser", Username.value);
-  // });
-
-  window.onbeforeunload = function(){
-    if(Username.value.length === 0 ){
+  window.onbeforeunload = function () {
+    if (Username.value.length === 0) {
       return;
     }
-    return "Deseja mesmo sair do site?"
-  }
+    return "Deseja mesmo sair do site?";
+  };
 
-  window.addEventListener("beforeunload", (e)=>{
-    e.preventDefault()
+  window.addEventListener("beforeunload", (e) => {
+    e.preventDefault();
 
-    if(Username.value.length === 0 ){
+    if (Username.value.length === 0) {
       return;
     }
-      return socket.emit("exitUser", Username.value);
-    
-  })
-
-
-  // window.addEventListener("close", (e) => {
-  //   console.log(Username.value.length)
-  //   // e.preventDefault();
-  //   if(Username.value.length === 0){
-  //     return;
-  //   }
-  //   socket.emit("newUser", Username.value);
-  // });
+    return socket.emit("exitUser", Username.value);
+  });
 
   socket.on("update", function (update) {
     renderMessage("update", update);
@@ -126,4 +103,4 @@
     }
     BoxMessages.scrollTop = BoxMessages.scrollHeight - BoxMessages.clientHeight;
   }
-})();
+
