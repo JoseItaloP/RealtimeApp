@@ -1,3 +1,4 @@
+
 (function () {
   const socket = io();
   const MessageForm = document.getElementById("MessageForm");

@@ -7,7 +7,7 @@ const app = express()
 const server = createServer(app)
 const io = new Server(server)
 
-app.use(express.static(join(__dirname+"/public")))
+app.use(express.static(join("public")))
 // app.get("/", (req, res)=>{
 //     res.sendFile(join(__dirname, '/public/index.html'))
 // })
