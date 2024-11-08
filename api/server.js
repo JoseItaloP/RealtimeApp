@@ -7,11 +7,7 @@ const app = express()
 const server = createServer(app)
 const io = new Server(server)
 
-app.use(express.static(join("public")))
-// app.get("/", (req, res)=>{
-//     res.sendFile(join(__dirname, '/public/index.html'))
-// })
-
+app.use(express.static(join("public"))) 
 io.on('connection', (socket) => {
     socket.on("newUser", (Username)=>{
         socket.broadcast.emit("update", Username)
