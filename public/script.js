@@ -1,4 +1,5 @@
-(function(){const socket = io();
+(function () {
+  const socket = io();
   const MessageForm = document.getElementById("MessageForm");
   const Newmessage = document.getElementById("Newmessage");
   const Username = document.getElementById("Uname");
@@ -103,4 +104,4 @@
     }
     BoxMessages.scrollTop = BoxMessages.scrollHeight - BoxMessages.clientHeight;
   }
-})()
+})();
