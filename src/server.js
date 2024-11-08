@@ -1,5 +1,4 @@
 const express = require("express")
-const {join} = require("node:path")
 const {createServer} = require("node:http")
 const { Server } = require("socket.io")
 
@@ -7,7 +6,8 @@ const app = express()
 const server = createServer(app)
 const io = new Server(server)
 
-app.use(express.static(join("public"))) 
+app.use(express.static('public'))
+
 io.on('connection', (socket) => {
     socket.on("newUser", (Username)=>{
         socket.broadcast.emit("update", Username)
