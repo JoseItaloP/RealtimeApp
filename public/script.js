@@ -1,5 +1,5 @@
 
-  const socket = io();
+  const socket = io()
   const MessageForm = document.getElementById("MessageForm");
   const Newmessage = document.getElementById("Newmessage");
   const Username = document.getElementById("Uname");
@@ -32,16 +32,10 @@
       Newmessage.value = "";
     }
   });
-  window.onbeforeunload = function () {
-    if (Username.value.length === 0) {
-      return;
-    }
-    return "Deseja mesmo sair do site?";
-  };
-
-  window.addEventListener("beforeunload", (e) => {
+  
+  window.addEventListener("beforeunload", async (e) => {
     e.preventDefault();
-
+    
     if (Username.value.length === 0) {
       return;
     }

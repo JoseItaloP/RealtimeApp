@@ -9,6 +9,7 @@ const io = new Server(server)
 app.use(express.static('public'))
 
 io.on('connection', (socket) => {
+    console.log("user connected")
     socket.on("newUser", (Username)=>{
         socket.broadcast.emit("update", Username)
     })
@@ -23,3 +24,4 @@ io.on('connection', (socket) => {
 server.listen(5000, ()=>{
     console.log('Server running at port 5000')
 })
+
